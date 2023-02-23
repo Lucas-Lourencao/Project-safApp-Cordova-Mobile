@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/framework7.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+        <title>safApp</title>
+    </head>
+    <body>
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="GERÊNCIA VIATURAS" class="page">
+
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div style="margin-top:7px;" class="left">
+							<a href="/admunidadesciabm/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title" >
+							<b>Gerencia OBM</b>
+						</div>
+						<div id="fechar_busca" class="right display-none fechar_busca">
+							<a><img style="margin-top:7px;" id="exit_delete" src="img/exit_delete.png" width="60"></a>
+						</div>
+					</div>
+				</div>
+		  
+				<!-- CONTEUDO DA PAGINA AQUI -->
+				<div class='page-content'>
+				<div id="cadastro_relatorio" class="list no-hairlines-md">
+					  <ul>
+						<li>
+						  <a href="/cadastros/" id="btn_partida"  style="color:#242423" class="item-link item-content">
+							<!--<div class="item-media"><img src="img/mapacarga1.png" width="40"></i></div>-->
+							<div class="item-inner">
+							  <div class="item-title">Cadastros de Recursos</div>
+							</div>
+						  </a>
+						</li>
+						<li>
+						  <a href="/logistica/" id="btn_partida"  style="color:#242423" class="item-link item-content">
+							<!--<div class="item-media"><img src="img/mapacarga1.png" width="40"></i></div>-->
+							<div class="item-inner">
+							  <div class="item-title">Gestão de Dados e Relatórios</div>
+							</div>
+						  </a>
+						</li>
+					<ul>
+				</div>
+				    <div id="relatorios_alteracoes" class="list accordion-list no-hairlines-md">
+						<ul>
+							<li id='oficina_viaturas' class="accordion-item display-none"><a href="#" class="item-content item-link">
+								<div class="item-inner">
+								  <div class="item-title" style="color:#242423">Manutenções Preventivas - Vtr</div>
+								</div></a>
+								<div class="accordion-item-content"><br>
+								<div class="block">
+									<ul id="manutencao_viatura">
+									
+									</ul>
+								</div>
+								</div>
+							</li>
+							<li class="accordion-item display-none alteracoes_condutor"><a href="#" class="item-content item-link">
+								<div class="item-inner">
+								  <div class="item-title" style="color:#242423">Manutenções Corretivas - Vtr</div>
+								</div></a>
+								<div class="accordion-item-content"><br>
+								<div class="block">
+									<ul id="alteracoes_condutor">
+									
+									</ul>
+								</div>
+								</div>
+							</li>
+							<li class="accordion-item display-none alteracoes_trafego"><a href="#" class="item-content item-link">
+								<div class="item-inner">
+								  <div class="item-title" style="color:#242423">Alterações de Trafego</div>
+								</div></a>
+								<div class="accordion-item-content"><br>
+								<div class="block">
+									<ul id="alteracoes_trafego">
+									
+									</ul>
+								</div>
+								</div>
+							</li>
+							<li id='oficina_equipamentos' class="accordion-item display-none"><a href="#" class="item-content item-link">
+								<div class="item-inner">
+								  <div class="item-title" style="color:#242423">Manutenção de Equipamentos</div>
+								</div></a>
+								<div class="accordion-item-content"><br>
+								<div class="block">
+									<ul id="manutencao_equipamento">
+									
+									</ul>
+								</div>
+								</div>
+							</li>
+							<li id='alteracao_patrimonio' class="accordion-item display-none"><a href="#" class="item-content item-link">
+								<div class="item-inner">
+								  <div class="item-title" style="color:#242423">Alterações de Patrimônio</div>
+								</div></a>
+								<div class="accordion-item-content"><br>
+								<div class="block">
+									<ul id="manutencao_patrimonio">
+									
+									</ul>
+								</div>
+								</div>
+							</li>
+						</ul>
+				    </div>
+					<div id='agendar_manutencao' class="block list no-hairlines-md display-none">
+						<ul>
+							<li>
+							  <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar">
+								<select class="viatura" id="viatura">
+								  <optgroup class="vtrs_bbm" label="Minhas Viaturas">
+									<option value="" selected>SELECIONAR</option>
+									
+								</select>
+								<div class="item-content">
+								  <div class="item-inner">
+									<div class="item-title">Viatura</div>
+								  </div>
+								</div>
+							  </a>
+							</li>
+							<li class="item-content item-input">
+								<div class="left">
+									<img style="margin-left:2px;" id="mapa" src="img/mapa.png" width="25">
+								</div>
+							  <div class="item-inner">
+								<div style="margin-left:10px;" class="item-title item-floating-label">Serviço</div>
+								<div class="item-input-wrap">
+								  <input style="margin-left:10px;" class="servico_manutencao" id="servico_manutencao" type="text" placeholder="Ir para">
+								  <span class="input-clear-button"></span>
+								</div>
+							  </div>
+							</li>
+							<li class="item-content item-input">
+								<div class="left">
+									<img style="margin-left:2px;" id="calendario" src="img/calendario.png" width="25">
+								</div>
+								<div class="item-inner">
+									<div style="margin-left:10px;" class="item-title item-floating-label">Data Prevista</div>
+									<div class="item-input-wrap">
+										<input style="margin-left:10px;" class="data_previsao" id="data_previsao" type="date" placeholder="">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+							   <div class="left">
+									<img style="margin-left:2px;" id="odometro" src="img/odometro.png" width="45">
+								</div>
+							  <div class="item-inner">
+								<div style="margin-left:10px;" class="item-title item-floating-label">Km Previsto</div>
+								<div class="item-input-wrap">
+								  <input style="margin-left:10px;" class="km_previsao" id="km_previsao" type="tel" placeholder="">  
+								  <span class="input-clear-button"></span>
+								</div>
+							  </div>
+							</li>
+						</ul><br>
+						
+					<button id="BotaoAgendar_Manutencao" style="background:linear-gradient(to right, #e52d27, #b31217);" class="BotaoAgendar_Manutencao col button button-fill button-round">Agendar Manutenção</button>
+					</div>
+				
+				</div>
+				
+				
+				
+			  <!-- FAB Right Bottom (Orange) -->
+			  <div class="fab fab-right-bottom">
+				<a href="#">
+				  <!-- Icons For MD Theme -->
+				  <i class="mdi mdi-plus"></i>
+				  <i class="mdi mdi-close"></i>
+				</a>
+				<!-- FAB speed dial actions with labels -->
+				<div class="fab-buttons fab-buttons-top">
+				  <!-- <a id='cadastrar_manutencao'  class="faledep fab-label-button">
+					<span>1</span>
+					<span class="fab-label">Agendar Manutenção</span>
+				  </a>-->
+				  <a id='verifica_alteracao'  class="faledep fab-label-button">
+					<span>1</span>
+					<span class="fab-label">Buscar Alterações</span>
+				  </a>
+				</div>
+			  </div>
+		 
+			</div>
+		  	  
+		  
+        </div>
+      </div>
+    </div>
+		
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+		
+    <script type="text/javascript" src="cordova.js"></script>
+        
+    </body>
+</html>

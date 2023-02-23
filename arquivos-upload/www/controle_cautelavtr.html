@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/framework7.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+        <title>Gerência Vtr 2ªCia/5ºBBM</title>
+    </head>
+    <body>
+    <div id="app">
+      <!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="CONTROLE DE TRAFEGO" class="page">
+
+					<!-- Top Navbar -->
+					<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+						<div class="navbar-inner">
+							<div style="margin-top:7px;" class="left">
+								<a href="/cobom/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+							</div>
+							<div class="title" >
+								<b>Cautela de Viaturas</b>
+							</div>
+							<div id="carregar_busca" class="right">
+								<a><img style="margin-top:7px;" class="refresh" id="refresh" src="img/refresh.png" width="60"></a>
+							</div>
+							<div id="fechar_busca" class="right display-none">
+								<a><img style="margin-top:7px;" id="exit_delete" src="img/exit_delete.png" width="60"></a>
+							</div>
+						</div>
+					</div>
+
+						
+
+					<!-- Scrollable page content -->
+					<div class="page-content">
+						<div class="title" style="letter-spacing:1px;margin-top:15px;background:#ffffff;color:#cccccc;" id="titleApp"><center>Cobonista,<br>tenha o controle das viaturas!</center></div>
+												  
+							<!-- CONTEUDO DA PAGINA AQUI -->
+						<div id="registrar_cautela" >
+								<div class="list">
+									<ul>
+									<li>
+									  <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="vtr_cautela" id="vtr_cautela">
+										  <optgroup class="vtrs_bbm" label="Minhas Viaturas">
+											<option value="" selected>SELECIONAR</option>
+											
+										</select>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div class="item-title">Viatura</div>
+										  </div>
+										</div>
+									  </a>
+									</li>
+									<li>
+									  <a class="item-link smart-select smart-select-init" data-open-in="popover">
+										<select class="cautela_vtr" id="cautela_vtr">
+										    <option value="" selected>SELECIONAR</option>
+										    <option value="CAUTELADA">CAUTELADA</option>
+											<option value="DESCAUTELADA">DESCAUTELADA</option>
+										</select>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div class="item-title">Status</div>
+										  </div>
+										</div>
+									  </a>
+									</li>
+									<li style="text-transform:uppercase">
+									  <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="cobonista" id="cobonista">
+										  <optgroup id="select_cobonista" label="Selecione o cobonista">
+											<option value="" selected>SELECIONAR</option>
+											
+										</select>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div class="item-title">Cobonista</div>
+										  </div>
+										</div>
+									  </a>
+									</li>
+									<li style="text-transform:uppercase">
+									  <a class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="condutor" id="condutor">
+										  <optgroup id="select_condutor" label="Selecione o condutor">
+											<option value="" selected>SELECIONAR</option>
+											
+										</select>
+										<div class="item-content">
+										  <div class="item-inner">
+											<div class="item-title">Condutor</div>
+										  </div>
+										</div>
+									  </a>
+									</li>
+									</ul>
+								</div>
+								<!-- Campo input apenas para conferencia de ID -->
+								<input class="display-none" style="margin-left:10px;" id="id" type="" placeholder="id">
+							<div class="list no-hairlines-md">
+								<ul>
+									<li style="text-transform:uppercase" class="item-content item-input">
+										<div class="left">
+											<img style="margin-left:2px;" id="" src="img/mapa.png" width="25">
+										</div>
+									  <div class="item-inner">
+										<div style="margin-left:10px;" class="item-title item-floating-label">Destino</div>
+										<div class="item-input-wrap">
+										  <input style="margin-left:10px;" class="destino" id="destino" type="text" placeholder="Ir para">
+										  <span class="input-clear-button"></span>
+										</div>
+									  </div>
+									</li>
+								</ul>
+								</div>
+								<div class="list no-hairlines-md  data_trafego display-none">
+									<ul>
+									<li class="item-content item-input">
+										<div class="left">
+											<img style="margin-left:2px;" id="calendario" src="img/calendario.png" width="25">
+										</div>
+										<div class="item-inner">
+											<div style="margin-left:10px;" class="item-title item-floating-label">Data</div>
+											<div class="item-input-wrap">
+												<input style="margin-left:10px;" class="data_atualizacao" id="data_atualizacao" type="date" placeholder="Número Funcional">
+												<span class="input-clear-button"></span>
+											</div>
+										</div>
+									</li>
+									<li id="hora_cautela" class="item-content item-input">
+										<div class="left">
+											<img style="margin-left:2px;" id="relogio" src="img/relogio.png" width="25">
+										</div>
+										<div class="item-inner">
+											<div style="margin-left:10px;" class="item-floating-label">Horario de Cautela</div>
+											<div class="item-input-wrap">
+												<input style="margin-left:10px;" class="hora_atualizacao" id="hora_atualizacao" type="time">
+												<span class="input-clear-button"></span>
+											</div>
+										</div>
+									</li>
+									</ul>
+								</div>
+								<div class="block">
+								<center><textarea style="padding: 2px 2px 2px 10px;border:2px solid #f2f1ed;border-radius:10px;" class="alteracoes" id="alteracoes" name="alteracoes" placeholder="Se necessário, descreva sua observação." cols="40" rows="5"></textarea></center>
+								</div>
+						
+							<div class="block">
+					
+							<button id="BotaoEditar_cautela" style="background:linear-gradient(to right, #0c75c2, #0c75c2);" class="BotaoEditar_trajeto col button button-fill button-round display-none"> Editar Cautela</button>
+							
+							<button id="BotaoSalvar_cautela" style="background:linear-gradient(to right, #e52d27, #b31217);" class="BotaoSalvar_trajeto col button button-fill button-round">Registrar Cautela</button>
+							
+							</div>
+						</div>
+							<!-- BUSCA CORRIDA -->
+						<div id="buscar_cautela" class="list accordion-list display-none">
+							<ul>
+								<li class="accordion-item"><a href="#" class="item-content item-link">
+									<div class="item-inner">
+									  <div class="item-title" style="color:#878787">CONSULTAR CAUTELA</div>
+									</div></a>
+									<div class="accordion-item-content">
+									<div class="row block">
+									<div class="col-10">
+									<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;" id="pesquisacobom" class="mdi mdi-magnify"></i></a>
+									</div>
+									<div class="col-90">
+									<form>
+									  <input class="meu-input" type="text" id="parametro_pesquisa" name="pesquisa-viatura" placeholder="Buscar...">
+									</form>
+									</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="lista_cautela">
+										
+									  
+										</ul>
+									</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+							
+							
+					</div>
+			</div>
+		</div>
+    </div>
+		
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+		
+    <script type="text/javascript" src="cordova.js"></script>
+        
+    </body>
+</html>

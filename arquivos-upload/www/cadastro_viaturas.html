@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/framework7.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<title>safApp</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="GERÊNCIA VIATURAS" class="page">
+
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div style="margin-top:7px;" class="left">
+							<a href="/logistica/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title" >
+							<b>Cadastro de Viaturas</b>
+						</div>
+						<div class="right">
+							<a><img style="margin-top:7px;" id="refresh" class="refresh" src="img/refresh.png" width="60"></a>
+						</div>
+					</div>
+				</div>
+
+                 
+
+          <!-- Scrollable page content -->
+			<div style="padding-top:35px;" class="page-content" style="background:#ffffff;">
+			<div  style="border-left:5px;letter-spacing:1px;" class="item-inner">
+			  <div class="item-title" style="color:#cccccc"><b>CONSULTAR</b></div>
+			</div>
+			<div class="row block">
+			<div class="col-10">
+			<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;" id="pesquisa_banco" class="mdi mdi-magnify"></i></a>
+			</div>
+			<div class="col-90">
+			<form>
+			  <input class="meu-input-2" type="text" id="parametro_viatura" placeholder="Consultar">
+			</form>
+			</div>
+			</div><br>
+			
+					<!-- CONTEUDO DA PAGINA AQUI -->
+					<div class="display-none" id="editar_viatura">
+						<div class="block list no-hairlines">
+							<ul>
+								<li class="item-content item-input">
+									<div class="item-inner">
+										<div class="item-title item-floating-label">Lotação</div>
+										<div class="item-input-wrap">
+											<input type="text" style="text-transform: uppercase;font-weight: bold;"
+												id="quartel" maxlength="100" name="quartel" placeholder=""><b> </b>
+										</div>
+									</div>
+								</li>
+								<li class="item-content item-input">
+									<div class="item-inner">
+										<div class="item-title item-floating-label">Sublotação</div>
+										<div class="item-input-wrap">
+											<input type="text" style="text-transform: uppercase;font-weight: bold;"
+												id="subunidade" maxlength="100" name="subunidade" placeholder=""><b>
+											</b>
+										</div>
+									</div>
+								</li>
+								<li class="item-content item-input">
+									<div class="item-inner">
+										<div class="item-title item-floating-label">Prefixo</div>
+										<div class="item-input-wrap">
+											<input type="text" style="text-transform: uppercase;font-weight: bold;"
+												id="prefixo_vtr" maxlength="100" name="prefixo_vtr" placeholder=""><b>
+											</b>
+										</div>
+										<input id="CampoID" type="hidden" placeholder="">
+									</div>
+								</li>
+								<li>
+									<a class="item-link smart-select smart-select-init" data-open-in="popover">
+										<select id="tipologia_vtr">
+											<option value="" selected>Selecionar</option>
+											<option value="ADM">ADM</option>
+											<option value="OPERACIONAL">OPERACIONAL</option>
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div style="color:#d2d3d7" class="item-title">Tipologia</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item-content item-input display-none">
+									<div class="item-inner">
+										<div style="margin-left:10px;" class="item-title item-floating-label">Militar
+										</div>
+										<div class="item-input-wrap">
+											<input style="margin-left:10px;" id="id" type="hidden" placeholder="id">
+											<input style="margin-left:10px;" id="militar" type="text"
+												placeholder="Nome de Guerra">
+											<span class="input-clear-button"></span>
+										</div>
+									</div>
+								</li>
+							</ul><br>
+						</div>
+
+						<p class="block row">
+							<button id="BotaoEditar_vtr"
+								class="col button button-fill button-round color-blue display-none"><i
+									class="mdi mdi-content-save"></i> Salvar Alterações </button>
+						</p>
+
+					</div>
+
+					<div class="list">
+						<ul id="viaturas_cadastradas">
+
+
+						</ul>
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/framework7.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<title>Login</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="home" class="page">
+
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div style="margin-top:7px;" class="left">
+							<a href="/home/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title">
+							<b>Atividades Técnicas</b>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!--POPUPS -->
+				<div id="popup_fluxo_alpcb" class="popup popup-about">
+					<!--Navbar Fluxograma ALPCB-->
+					<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+						<div class="navbar-inner">
+							<div style="margin-top:7px;" class="left popup-close">
+								<a><img id="voltar" src="img/exit_delete.png" width="60"></a>
+							</div>
+							<div class="title">
+								<b>Fluxograma ALPCB</b>
+							</div>
+						</div>
+					</div>
+					<!--Conteudo do popup-->
+					<div style="margin-top: -40px;" class="page-content">
+						<div style="margin-top: 0px;" id="fluxophp_alpcb" class="block">
+							<div style="margin-top: 5px;" id="alpcb_1etapa" class="alpcb_1etapa">
+								<div
+									style="padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#959C9C;text-align:center;font-size:16px;">
+									O ALPCB é
+									um alvará provisório emitido pelo Corpo de Bombeiros enquanto a edificação faz todas
+									as adequações necessárias para obtenção do alvará permanente.
+								</div><br>
+								<!-- <div style="color:#959C9C;margin-top:20px;text-align:justify;"
+									class="list no-hairline-top-md no-hairline-bottom-md">
+									&#x27AE;
+									&nbsp; Para
+									emissão do ALPCB é necessário que:</div>
+								<div data-pagination='{"el": ".swiper-pagination"}' data-space-between="20"
+									data-slides-per-view="1" class="swiper-container swiper-init demo-swiper">
+									<div class="swiper-pagination"></div>
+									<div class="swiper-wrapper">
+										<div style="border-left:3px solid #007fff;margin-top:3px;font-size:24px;color:#adadad;text-align:justify;"
+											height="50px" width="200px;" class="list no-hairline-md swiper-slide">
+											<ul>
+												<li style="margin-left:6px;"><span style="color:#007fff;">1.</span> A
+													atividade exercida na
+													edificação
+													seja compatível como o
+													alvará provisório; </li>
+											</ul>
+										</div>
+										<div style="border-left:3px solid #007fff;margin-top:3px;font-size:24px;color:#adadad;text-align:justify;"
+											height="50px" width="200px;" class="list no-hairline-md swiper-slide">
+											<ul>
+												<li class="no-hairline-md" style="margin-left:6px;"><span
+														style="color:#007fff;">2.</span>
+													Executar plenamente algumas
+													medidas
+													de segurança, pois são medidas
+													obrigatórias e sem as quais não é possível emitir um ALPCB;</li>
+											</ul>
+										</div>
+										<div style="border-left:3px solid #007fff;margin-top:3px;font-size:24px;color:#adadad;text-align:justify;"
+											height="50px" width="200px;" class="list no-hairline-md swiper-slide">
+											<ul>
+												<li class="no-hairline-md" style="margin-left:6px;"><span
+														style="color:#007fff;">Obs:</span>&nbsp;As
+													medidas
+													compensatórias
+													variam em razão da medida de
+													segurança que deveria estar instalada/operando na edificação e será
+													regularizada no prazo de vigência do ALPCB.</li>
+											</ul>
+										</div>
+									</div>
+								</div><br><br> -->
+								<div style="color:#959C9C;margin-top:20px;text-align:justify;"
+									class="list no-hairline-top-md no-hairline-bottom-md">
+									&#x27AE;
+									&nbsp; Para
+									emissão do ALPCB é necessário que:
+									<ul
+										style="border-left:3px solid #007fff;margin-top:10px;font-size:16px;color:#adadad;text-align:justify;">
+										<li style="margin-left:6px;"><span style="color:#007fff;">1.</span> A
+											atividade exercida na
+											edificação
+											seja compatível como o
+											alvará provisório; </li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">2.</span>
+											Executar plenamente algumas
+											medidas
+											de segurança, pois são medidas
+											obrigatórias e sem as quais não é possível emitir um ALPCB;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">3.</span>
+											Instalar medidas de segurança
+											compensatórias, também
+											chamadas de mitigadoras. </li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">Obs:</span>&nbsp;As
+											medidas
+											compensatórias
+											variam em razão da medida de
+											segurança que deveria estar instalada/operando na edificação e será
+											regularizada no prazo de vigência do ALPCB.</li>
+									</ul>
+								</div>
+								<center>
+									<!-- <div style="display:inline-block;position:relative;"> -->
+									<div class="balao_etapa"
+										style="color:#000000;padding:20px;text-align:center;font-size:22px;">
+										<a id="some_1etapa"><span>Fluxograma do Alvará Provisório</span></a>
+									</div>
+									<!-- <div
+											style="display:inline-block;position:relative;z-index: -1;margin-right:20%;">
+											<img src="img/click.gif" width="200">
+										</div> -->
+									<!-- </div> -->
+								</center><br><br>
+							</div>
+							<div class="display-none" id="numero_alpcb">
+								<a id="volta_alpcb_inicio" style="margin-top:3px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a>
+								<!-- <div
+									style="margin-top:5px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#959C9C;text-align:justify;font-size:14px;">
+									Se sua edificação nunca teve um alvará provisório, cliquem em "1° ALPCB". Se já teve
+									o primeiro ALPCB, clique em "2° ALPCB". Por fim, se a edificação já teve dois
+									alvarás
+									provisórios, escolha a opção "3° ALPCB".
+								</div><br> -->
+								<div style="align-items:center;text-align:center">
+									<!-- <center> -->
+									<div style="margin-top:60px;" id="primeiro_alpcb" class="block">
+										<a
+											style="padding:20px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#007fff;text-align:center;word-spacing: 2px;font-size:30px;">
+											<b>1° ALPCB</b></a>
+									</div><br>
+									<div style="margin-top:30px;" id="segundo_alpcb" class="block">
+										<a
+											style="padding:20px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#007fff;text-align:center;word-spacing: 2px;font-size:30px;">
+											<b>2° ALPCB</b></a>
+									</div><br>
+									<div style="margin-top:30px;" id="terceiro_alpcb" class="block">
+										<a
+											style="padding:20px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#007fff;text-align:center;word-spacing: 2px;font-size:30px;">
+											<b>3° ALPCB</b></a>
+									</div>
+									<!-- </center> -->
+								</div>
+							</div>
+							<div style="margin-top:5px;" class="display-none alpcb_2etapa" id="alpcb_2etapa">
+								<a id="volta_alpcb_1etapa" style="margin-top:3px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a>
+								<center>
+									<div class="balao_etapa"
+										style="margin-top:20px;color:#000000;text-align:center;font-size:22px;">A
+										atividade
+										exercida na edificação se enquadra em alguma das
+										divisões abaixo?
+									</div>
+								</center><br>
+								<div class="block"
+									style="padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#007fff;text-align:center;word-spacing: 2px;font-size:20px;">
+									<span class="link popover-open" href="#"
+										data-popover=".popover-about"><a><b>A-2</b>,
+											<b>&nbsp A-3</b></a><sup style="color:#007fff;font-size:12px;">
+											1,2</sup>,
+									</span>
+									<span class="link  popover-open" href="#" data-popover=".popover-gf"><a><b>&nbsp
+												F-5</b>,
+											<b>&nbsp F-6</b>,
+											<b>&nbsp F-7</b></a>,
+									</span>
+									<span class="link  popover-open" href="#" data-popover=".popover-gg"><a><b>&nbsp
+												G-3</b></a>,</span>
+									<span class="link  popover-open" href="#" data-popover=".popover-gl"><a><b>&nbsp
+												L-1</b>,
+											<b>&nbsp L-2</b>,
+											<b>&nbsp L-3</b></a>, ou
+									</span>
+									<span class="link  popover-open" href="#" data-popover=".popover-gm"><a><b>&nbsp
+												M-2</b></a>.</span><br>
+								</div>
+								<span
+									style="margin-top:10px;color:#b1b1b1;margin-left:10px;padding:0px;text-align:center;font-size:14px;">
+									<center>Clique
+										nas
+										siglas para ver as atividades.</center>
+								</span><br><br>
+								<div style="margin-top:0px;padding:0px;text-align:center;font-size:18px;"
+									class="item-content row">
+									<div id="edificacao_impropria"
+										class="edificacao_impropria link col button button-outline button-round button-raised">
+										<span><b>SIM</b></span>
+									</div>
+									<div id="edificacao_apropriada"
+										class="edificacao_apropriada link col button button-outline button-round button-raised">
+										<span><b>NÃO</b></span>
+									</div>
+								</div>
+							</div>
+							<div id="alpcb_3etapa" class="alpcb_3etapa display-none">
+								<a id="volta_alpcb_2etapa" style="margin-top:5px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a>
+								<div
+									style="margin-top:15px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#adadad;text-align:center;font-size:16px;">
+									Para dar
+									início ao processo de ALPCB, é necessário iniciar um processo de vistoria
+									normalmente no
+									SIAT.
+								</div>
+								<div class="list no-hairline-top-md no-hairline-bottom-md"
+									style="margin-top:20px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Após a solicitação da vistoria:
+									<ul
+										style="margin-top:10px;border-left:3px solid #007fff;color:#adadad;margin-left:3px;">
+										<li style="margin-left:6px;"><span style="color:#007fff;">1.</span>&nbsp;Um
+											vistoriador fará a vistoria em até
+											15 dias, após a solicitação;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">2.</span>&nbsp;Se a
+											edificação de fato for compatível
+											com o ALPCB, durante o relato de
+											vistoria, o vistoriador informará
+											ao SIAT e autorizará o início do processo de ALPCB no sistema.</li>
+									</ul>
+								</div>
+								<center>
+									<div class="balao_etapa" style="color:#000000;text-align:center;font-size:22px;">O
+										Vistoriador
+										considerou a edificação apta ao processo de ALPCB?
+									</div>
+								</center><br><br>
+								<div style="padding:0px;text-align:center;font-size:18px;" class="item-content row">
+									<div id="edificacao_2apropriada"
+										class="col link button button-outline button-round button-raised">
+										<span><b>SIM</b></span>
+									</div>
+									<div id="edificacao_2impropria"
+										class="col link button button-outline button-round button-raised">
+										<span><b>NÃO</b></span>
+									</div>
+								</div><br>
+							</div>
+							<div id="alpcb_4etapa" class="alpcb_4etapa display-none">
+								<a id="volta_alpcb_3etapa" style="margin-top:15px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a><br>
+								<div
+									style="margin-top:5px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#adadad;text-align:center;font-size:16px;">
+									Após a visita do vistoriador e a emissão do laudo de irregularidaddes, o
+									proprietário
+									deve realizar os procedimentos abaixo para nova avaliação do vistoriador e
+									parecer da autoridade que analisará a o processo de
+									obtenção do ALPCB.
+								</div>
+								<div class="list no-hairline-top-md no-hairline-bottom-md"
+									style="margin-top:20px;color:#959C9C;text-align:justify;font-size:14px;">
+									<ul
+										style="margin-top:10px;border-left:3px solid #007fff;color:#adadad;margin-left:3px;">
+										<li style="margin-left:6px;"><span style="color:#007fff;">1.</span>&nbsp;Sanar
+											as pendências levantadas no laudo de irregularidades emitido pelo
+											vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">2.</span>&nbsp;Executar todas as medidas de
+											segurança obrigatórias para liberação de
+											um ALPCB;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">3.</span>&nbsp;Executar todas as medidas
+											compensatórias necessárias em razão da
+											ausência/deficiência de uma medida de segurança ordinária;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">4.</span>&nbsp;Anexar
+											toda documentação relativa as medidas de segurança da
+											edificação no SIAT para avaliação do vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">5.</span>&nbsp;Solicitar nova vistoria para o
+											vistoriador conferir o cumprimento de todas as ações acima;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">6.</span>&nbsp;Não
+											havendo pendências para o ALPCB, o vistoriador fará novo relato de vistoria
+											informando que o proprietário pode solicitar o Parecer Superior no SIAT.
+										</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">7.</span>&nbsp;Ao
+											solicitar o Parecer Superior no SIAT, o proprietário deve anexar o
+											cronograma de execução das medidas de segurança que serão regularizadas na
+											vigência do ALPCB e informar o prazo requerido (máx. 180 dias) do ALPCB,
+											para obter a regularização permanente.</li>
+									</ul>
+								</div>
+								<div style="margin-top:10px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Na primeira concessão do ALPCB, após
+									solicitação do Parecer Superior, todo o processo será avaliado pelo Chefe da SAT ou
+									comissão técnica da SAT.
+								</div><br>
+								<center>
+									<div class="balao_etapa" style="color:#000000;text-align:center;font-size:22px;">O
+										parecer
+										superior foi deferido?
+									</div>
+								</center><br><br>
+								<div style="padding:0px;text-align:center;font-size:18px;" class="item-content row">
+									<div id="edificacao_3apropriada"
+										class="popup-close col link button button-outline button-round button-raised">
+										<span><b>SIM</b></span>
+									</div>
+									<div id="edificacao_3impropria"
+										class="col link button button-outline button-round button-raised">
+										<span><b>NÃO</b></span>
+									</div>
+								</div><br><br>
+							</div>
+							<div class="segundo_alpcb display-none">
+								<a id="alpcb_segundo" style="margin-top:15px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a><br>
+								<div
+									style="margin-top:5px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#adadad;text-align:justify;font-size:16px;">
+									A liberação de um segundo alvará provisório cabe a avaliação, discricionária, de uma
+									Comissão Técnica. É
+									importante que o proprietário tenha executado parcialmente o acordado na liberação
+									do 1°ALPCB. Além
+									disso, na solicitação de Parecer Superior para o 2° ALPCB, o interessado
+									deve informar os fatos que justifiquem a não regularização da edificação na
+									vigência do 1° ALPCB.
+								</div>
+								<div class="list no-hairline-top-md no-hairline-bottom-md"
+									style="margin-top:20px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Os itens abaixo devem ser realizados para análise de emissão do 2° ALPCB:
+									<ul
+										style="margin-top:10px;border-left:3px solid #007fff;color:#adadad;margin-left:3px;">
+										<li style="margin-left:6px;"><span style="color:#007fff;">1.</span>&nbsp;Sanar
+											as pendências levantadas no laudo de irregularidades emitido pelo
+											vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">2.</span>&nbsp;Executar todas as medidas de
+											segurança obrigatórias para liberação de
+											um ALPCB;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">3.</span>&nbsp;Executar todas as medidas
+											compensatórias necessárias em razão da
+											ausência/deficiência de uma medida de segurança ordinária;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">4.</span>&nbsp;Anexar
+											toda documentação relativa as medidas de segurança da
+											edificação no SIAT para avaliação do vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">5.</span>&nbsp;Solicitar nova vistoria para o
+											vistoriador conferir o cumprimento de todas as ações acima;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">6.</span>&nbsp;Não
+											havendo pendências para o ALPCB, o vistoriador fará novo relato de vistoria
+											informando que o proprietário pode solicitar o Parecer Superior no SIAT.
+										</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">7.</span>&nbsp;Ao
+											solicitar o Parecer Superior no SIAT, o proprietário deve anexar o
+											cronograma de execução das medidas de segurança que serão regularizadas na
+											vigência do ALPCB e informar o prazo requerido (máx. 180 dias) do ALPCB,
+											para obter a regularização permanente.</li>
+									</ul>
+								</div>
+								<div style="margin-top:10px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Na segunda concessão do ALPCB, após
+									solicitação do Parecer Superior, todo o processo será avaliado por uma comissão
+									técnica do Batalhão de Bombeiros responsável pelo município onde se encontra a
+									edificação.
+								</div><br>
+								<center>
+									<div class="balao_etapa" style="color:#000000;text-align:center;font-size:22px;">O
+										parecer
+										superior foi deferido?
+									</div>
+								</center><br><br>
+								<div style="padding:0px;text-align:center;font-size:18px;" class="item-content row">
+									<div id="edificacao_3apropriada"
+										class="popup-close col link button button-outline button-round button-raised">
+										<span><b>SIM</b></span>
+									</div>
+									<div id="edificacao_3impropria"
+										class="col link button button-outline button-round button-raised">
+										<span><b>NÃO</b></span>
+									</div>
+								</div><br><br>
+							</div>
+							<div class="terceiro_alpcb display-none">
+								<a id="alpcb_terceiro" style="margin-top:15px;"><i class="mdi mdi-arrow-left"
+										width="30px"></i>&nbsp;voltar</a><br>
+								<div
+									style="margin-top:5px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#adadad;text-align:justify;font-size:16px;">
+									A liberação de um terceiro alvará provisório é um caso de excepcionalidade e cabe a
+									avaliação, discricionária, da
+									Comissão Técncia constituida pelo Comandante Geral do Corpo de Bombeiros. É
+									fundalmental que o proprietário tenha executado parcialmente o acordado na liberação
+									do 2°ALPCB. Além
+									disso, na solicitação de Parecer Superior para o 3° ALPCB, o interessado
+									deve informar os fatos que justifiquem a não regularização da edificação na
+									vigência do 2° ALPCB.
+								</div>
+								<div class="list no-hairline-top-md no-hairline-bottom-md"
+									style="margin-top:20px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Os itens abaixo devem ser realizados para análise de emissão do 3° ALPCB:
+									<ul
+										style="margin-top:10px;border-left:3px solid #007fff;color:#adadad;margin-left:3px;">
+										<li style="margin-left:6px;"><span style="color:#007fff;">1.</span>&nbsp;Sanar
+											as pendências levantadas no laudo de irregularidades emitido pelo
+											vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">2.</span>&nbsp;Executar todas as medidas de
+											segurança obrigatórias para liberação de
+											um ALPCB;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">3.</span>&nbsp;Executar todas as medidas
+											compensatórias necessárias em razão da
+											ausência/deficiência de uma medida de segurança ordinária;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">4.</span>&nbsp;Anexar
+											toda documentação relativa as medidas de segurança da
+											edificação no SIAT para avaliação do vistoriador;</li>
+										<li style="margin-left:6px;"><span
+												style="color:#007fff;">5.</span>&nbsp;Solicitar nova vistoria para o
+											vistoriador conferir o cumprimento de todas as ações acima;</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">6.</span>&nbsp;Não
+											havendo pendências para o ALPCB, o vistoriador fará novo relato de vistoria
+											informando que o proprietário pode solicitar o Parecer Superior no SIAT.
+										</li>
+										<li style="margin-left:6px;"><span style="color:#007fff;">7.</span>&nbsp;Ao
+											solicitar o Parecer Superior no SIAT, o proprietário deve anexar o
+											cronograma de execução das medidas de segurança que serão regularizadas na
+											vigência do ALPCB e informar o prazo requerido (máx. 180 dias) do ALPCB,
+											para obter a regularização permanente.</li>
+									</ul>
+								</div>
+								<div style="margin-top:10px;color:#959C9C;text-align:justify;font-size:14px;">
+									&#x27AE;
+									&nbsp; Na terceira concessão do ALPCB, após
+									solicitação do Parecer Superior, todo o processo será avaliado pelo Comandante Geral
+									do Corpo de Bombeiros.
+								</div><br>
+								<center>
+									<div class="balao_etapa" style="color:#000000;text-align:center;font-size:22px;">O
+										parecer
+										superior foi deferido?
+									</div>
+								</center><br><br>
+								<div style="padding:0px;text-align:center;font-size:18px;" class="item-content row">
+									<div id="edificacao_3apropriada"
+										class="popup-close col link button button-outline button-round button-raised">
+										<span><b>SIM</b></span>
+									</div>
+									<div id="edificacao_3impropria"
+										class="col link button button-outline button-round button-raised">
+										<span><b>NÃO</b></span>
+									</div>
+								</div><br><br>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Scrollable page content -->
+				<div class="page-content">
+					<div style="margin:10px 10px 5px 10px;" class="versao_vinte_cinco" id="versao_vinte_cinco"></div>
+					<input style="margin-left:10px;" id="id" class="display-none" placeholder="id">
+					<div class="list accordion-list no-hairlines-md">
+						<ul>
+							<li>
+								<a class="item-link smart-select smart-select-init">
+									<select class="select_tipoprocesso" id="select_tipoprocesso">
+										<option value="" selected>Selecionar</option>
+										<option value="1" selected>Isenção</option>
+										<option value="2" selected>Dispensa</option>
+										<option value="3" selected>AAFCB</option>
+										<option value="4" selected>ALPCB</option>
+										<option value="5" selected>Processo Simplificado (P.S)</option>
+										<option value="6" selected>P.S - Shows e Eventos</option>
+										<option value="7" selected>Projeto Técnico (P.T)</option>
+										<option value="8" selected>P.T Shows e Eventos</option>
+										<option value="9" selected>Fiscalização</option>
+									</select>
+									<div class="item-content">
+										<div class="item-inner">
+											<div class="item-title">Tipo de Processo</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li id="processo_isencao" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Isenção de cumprimento
+											do
+											COSCIP</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="isencao_coscip">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_dispensa" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Dispensa de ALCB
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="dispensa_alcb">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_aafcb" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Autorização de
+											Funcionamento</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="aafcb_edificacoes">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_alpcb" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Alvará Provisório</div>
+									</div>
+
+								</a>
+
+								<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+								<div class="accordion-item-content">
+
+									<div
+										style="margin:10px;padding:10px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #fafafa;color:#adadad;text-align:justify;font-size:16px;">
+										O processo de Alvará Provisório pode ser requerido para regularização de
+										edificações
+										que demandem <span style="color:#007fff">Projeto Técnico <b>(P.T)</b></span> ou
+										mesmo
+										aquelas que se regularizam via <span style="color:#007fff">Processo Simplificado
+											<b>(P.S)</b></span>, ou seja, sem necessidade de projeto.</div>
+									<!-- ENTRE ESSES PONTOS SERÁ FEITO A PÁGINA DO ALPCB-->
+									<div style="padding: 10px;">
+										<div style="box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;"
+											class="list accordion-list no-hairlines-md">
+											<div class="item-inner no-hairline-bottom">
+												<div class="item-title"
+													style="font-size: 12px;margin-left:10px;color:#007fff">
+													<b>Medidas
+														de
+														Segurança:</b>
+												</div>
+											</div>
+											<ul>
+												<li id="med_obrigatorias" class="accordion-item">
+													<a href="#" class="item-content item-link">
+														<div class="item-inner">
+															<div class="item-title" style="color:#959C9C">
+																Obrigatórias:
+															</div>
+														</div>
+													</a>
+													<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+													<div class="accordion-item-content">
+														<div class="card">
+															<div style="border-radius:10px;background:#f8ff76;color:#242423"
+																class="card-header"><b>Fique atento!</b></div>
+															<div style="text-align:justify;color:#242423"
+																class="card-content card-content-padding">As
+																medidas
+																obrigatórias devem estar em perfeitas condições
+																de
+																instalação e operação para liberação do ALPCB.
+																Não é
+																possível emitir um ALPCB se tais medidas
+																estiverem
+																ausentes na edificação.</div>
+														</div>
+														<div align='justfy' class="">
+															<ul id="medidas_obrigatorias">
+
+															</ul>
+														</div>
+														<!-- ENTRE ESSES PONTOS SERÁ FEITO A PÁGINA DO ALPCB-->
+													</div>
+												</li>
+												<li id="med_compensatorias" class="accordion-item">
+													<a href="#" class="item-content item-link">
+														<div class="item-inner">
+															<div class="item-title" style="color:#959C9C">
+																Compensatórias:
+															</div>
+														</div>
+													</a>
+													<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+													<div class="accordion-item-content">
+														<div class="card">
+															<div style="border-radius:10px;background:#f8ff76;color:#242423"
+																class="card-header"><b>Fique atento!</b></div>
+															<div align="justify" style="color:#242423"
+																class="card-content card-content-padding">As
+																medidas
+																compensatórias devem ser executadas para suprir
+																a
+																ausência ou precariedade de uma medida de
+																segurança
+																exigida pela NT 02 para uma determinada
+																edificação.
+																Somente as medidas de segurança relacionadas
+																abaixo
+																podem ser regularizadas na vigência do ALPCB.
+															</div>
+														</div>
+														<div align='justfy' class="">
+															<ul id="medidas_compensatorias">
+
+															</ul>
+														</div>
+														<!-- ENTRE ESSES PONTOS SERÁ FEITO A PÁGINA DO ALPCB-->
+													</div>
+												</li>
+												<li id="med_compensatorias" class="accordion-item">
+													<a href="#" class="item-content item-link">
+														<div class="item-inner">
+															<div class="item-title" style="color:#959C9C">
+																Calculadora de
+																Brigadistas
+															</div>
+														</div>
+													</a>
+													<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+													<div class="accordion-item-content">
+														<div style="background:#f6f6f6;padding-top:10px;padding-bottom:10px;box-sizing:30px;margin-left:10px;margin-right:10px;border-radius:5px;border:1px solid #e9e8e8;"
+															class="list no-hairlines-md row">
+															<div style="padding-top:10px;" class="col">
+																<div style="margin-left:10px;font-size:10px;margin-bottom:3px;color:#007fff;"
+																	class="item-title">
+																	População Fixa:
+																</div>
+																<input
+																	style="box-sizing:30px;margin-left:10px;border-radius:5px;border-bottom:1px solid #58abff;"
+																	class="item-content item-wrap populacao_turno"
+																	id="populacao_turno" type="tel"
+																	placeholder="N°Pessoas/Turno">
+															</div>
+															<div style="padding-top:10px;" class="col">
+																<div style="font-size:10px;margin-bottom:3px;color:#007fff;"
+																	class="item-title">
+																	Brigadistas/Turno:
+																</div>
+																<div style="background:#e9e8e8;box-sizing:30px;margin-right:10px;border-radius:5px;border:1px solid #58abff;"
+																	class="item-content item-wrap" id="brigadista_turno"
+																	type="tel">
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<a href="#" id="fluxograma_sat" style="color:#959C9C;"
+														data-popup=".popup-about"
+														class="item-link item-content popup-open">
+														<!--<div class="item-media"><img src="img/firefront.png" width="60"></i></div>-->
+														<div class="item-inner">
+															<div class="item-title">
+																Fluxograma
+																ALPCB</div>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+							</li>
+							<li id="processo_simplificado" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Processo Simplificado (P.S)
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="processo_ps">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_shows_ps" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">P.S - Shows e Eventos</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="ps_shows">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_projetotecnico" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Projeto Técnico (P.T)
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="projeto_tecnico">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_shows_pt" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">P.T - Shows e Eventos
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="pt_show">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="processo_fiscalizacao" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#adadad">Fiscalização
+										</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="block">
+										<ul id="fiscalizacao">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+
+
+				</div>
+
+				<div class="popover popover-about">
+					<div class="popover-inner">
+						<div
+							style="margin:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;">
+							<div class=" block">
+								<p style="text-align:justify;font-size:20px;color:#007fff;"><b>Atividades:</b></p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">A-2:
+									<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Edifícios de
+										apartamentos e condomínios
+										residenciais em geral.</span>
+								</p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">A-3:
+									<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Pensionatos,
+										internatos, alojamentos, mosteiros,
+										conventos, residências geriátricas. Capacidade
+										máxima de 16 leitos.</span>
+								</p>
+							</div><br>
+							<div style="margin:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;text-align:justify;font-size:12px;"
+								class="block item-content">
+								<span style="color:#007fff;"><b>Nota 01:</b></span><span
+									style="text-align:justify;font-size:14px;color:#959C9C;">Nos casos de renovação do
+									licenciamento
+									as ocupações A-2 e A-3 poderão ter análise de
+									viabilidade de emissão de ALPCB.</span><br>
+								<span style="color:#007fff;"><b>Nota 02:</b></span><span
+									style="text-align:justify;font-size:14px;color:#959C9C;">Edificações das divisões
+									A-2
+									e A-3,
+									construídas e não licenciadas no CBMES, porém
+									que já possuam o habite-se municipal, poderão ter a
+									análise de viabilidade de emissão do ALPCB.</span><br>
+							</div><br>
+						</div>
+					</div>
+				</div>
+
+				<div class="popover popover-gf">
+					<div class="popover-inner">
+						<div
+							style="margin:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;">
+							<div class=" block">
+								<p style="text-align:justify;font-size:20px;color:#007fff;"><b>Atividades:</b></p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">F-5:
+									<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Teatros em
+										geral, cinemas, óperas, auditórios de
+										estúdios de rádio e televisão, auditórios em geral
+										e assemelhados.</span>
+								</p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">F-6:
+									<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Boates, clubes
+										noturnos em geral, salões de
+										baile, restaurantes dançantes, clubes sociais,
+										bingo, bilhares, tiro ao alvo, boliche e
+										assemelhados.</span>
+								</p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">F-7:
+									<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Circos e
+										assemelhados.</span>
+								</p>
+							</div><br>
+						</div>
+					</div>
+				</div>
+				<div class="popover popover-gg">
+					<div class="popover-inner">
+						<div
+							style="margin:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;">
+							<div class=" block">
+								<p style="text-align:justify;font-size:20px;color:#007fff;"><b>Atividades:</b></p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">G-3:</p>
+								<p style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Postos de
+									abastecimento e serviço, garagens
+									(exceto veículos de carga e coletivos).</p>
+							</div><br>
+						</div>
+					</div>
+				</div>
+
+				<div class="popover popover-gl">
+					<div class="popover-inner">
+						<div class=" block">
+							<p style="text-align:justify;font-size:20px;color:#007fff;"><b>Atividades:</b></p>
+							<p style="text-align:justify;font-size:18px;color:#007fff;">L-1:
+								<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Comércio em geral
+									de fogos de artifício e
+									assemelhados.
+								</span>
+							</p>
+							<p style="text-align:justify;font-size:18px;color:#007fff;">L-2:
+								<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Indústria de
+									material explosivo.</span>
+							</p>
+							<p style="text-align:justify;font-size:18px;color:#007fff;">L-3:
+								<span style="text-align:justify;font-size:16px;color:#959C9C;">&nbsp Depósito de
+									material explosivo.</span>
+							</p>
+						</div><br>
+					</div>
+				</div>
+
+				<div class="popover popover-gm">
+					<div class="popover-inner">
+						<div
+							style="margin:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;">
+							<div class=" block">
+								<p style="text-align:justify;font-size:20px;color:#007fff;"><b>Atividades:</b></p>
+								<p style="text-align:justify;font-size:18px;color:#007fff;">M-2:</p>
+								<p style="text-align:justify;font-size:16px;color:#959C9C;">Edificação destinada a
+									produção, manipulação,
+									armazenamento e distribuição de líquidos ou
+									gases combustíveis e inflamáveis.</p>
+							</div><br>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>

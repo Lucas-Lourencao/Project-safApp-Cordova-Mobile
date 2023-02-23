@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/framework7.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<title>Gerência Vtr 2ªCia/5ºBBM</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="CONTROLE DE TRAFEGO" class="page">
+
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div style="margin-top:7px;" class="left">
+							<a href="/admunidadesciabm/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title">
+							<b>COBOM</b>
+						</div>
+						<div id="carregar_busca" class="right  display-none">
+							<a><img style="margin-top:7px;" id="refresh" src="img/refresh.png" width="60"></a>
+						</div>
+						<div id="fechar_busca" class="right display-none">
+							<a><img style="margin-top:7px;" id="exit_delete" src="img/exit_delete.png" width="60"></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Scrollable page content -->
+				<div class="page-content">
+
+					<div class="" style="letter-spacing:1px;margin-top:15px;background:#ffffff;color:#cccccc;"
+						id="titleApp">
+						<center>Cobonista,<br>tenha o controle das viaturas!</center>
+					</div>
+					<div style="margin-top:10px;" class="list">
+						<ul>
+							<li id="trafego_cobom">
+								<a href="/controle_cautelavtr/" id="btn_partida" style="color:#85858a;"
+									class="item-link item-content">
+									<!--<div class="item-media"><img src="img/firefront.png" width="60"></i></div>-->
+									<div class="item-inner">
+										<div class="item-title">Cautela de Viatura</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div style="margin-top:30px;margin-right:5px;margin-left:5px;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;border:1px solid #959C9C;"
+						class="list">
+						<div
+							style="margin-left:10px;margin-bottom:3px;letter-spacing:1px;margin-top:15px;color:#85858a;">
+							Viaturas em uso:</div>
+						<ul id="lista_cauteladas">
+
+						</ul>
+					</div>
+					<div id="garage_full" class="display-none garage_full">
+						<center><img src="img/garage.jpg" style="max-width:300px;"></center>
+					</div>
+
+
+				</div>
+
+				<!--<div class="fab fab-right-bottom">
+					<a href="#">-->
+				<!-- Icons For MD Theme -->
+				<!--<i class="mdi mdi-plus"></i>
+						<i class="mdi mdi-close"></i>
+					</a>-->
+				<!-- FAB speed dial actions with labels -->
+				<!--<div class="fab-buttons fab-buttons-top">
+						<a id="trafego_cobom" href='/controle_cautelavtr/' class="formr fab-label-button">
+							<span>+</span>
+							<span class="fab-label">Cautela de Viaturas</span>
+						</a>
+					</div>
+				</div>-->
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>

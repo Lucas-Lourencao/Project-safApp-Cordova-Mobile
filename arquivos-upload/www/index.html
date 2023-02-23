@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/framework7.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>s a f A p p</title>
+
+<style>
+/* A bit of demo styles */;
+.demo-swiper .swiper-slide {
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  background: #fff;
+}
+.demo-swiper {
+  margin: 0px 0 0px;
+  font-size: 18px;
+  height: 100%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}	
+
+#recibo{
+	 background-color: #ddd;
+	 border-radius: 100%;
+	 width: 200px;
+	 height: 200px;
+	 object-fit: cover;	 
+	 }
+</style>
+
+
+</head>
+
+<body>
+
+
+    <!-- App root element -->
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+		<!-- MENU ESQUERDO -->
+		<div class="panel panel-left panel-cover">
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);color:white;" class="block topo-painel" id="blocoMenu">
+
+                    <div class="block-header" style="color:white;">
+                        <div class="row">
+                            <div style="margin-left:40px;"><center><h1>s a f A p p</h1></center></div>
+							<div style="margin-top:30px;font-family:Sofia;font-size: 16px;color:#ffffff"><center><h3>Vidas Alheias e Riquezas Salvar</h3></center></div>
+                        </div>
+
+                    </div>
+                </div>
+				
+				<!-- CONTEUDO DA PAGINA AQUI -->
+				<div class="list">
+				  <ul>
+					<li class="display-none">
+					  <a href="/popsTESTE/" id="pops"  style="color:#242423" class="item-link item-content display-none">
+						<div class="item-media"><img src="img/manual.png" width="30"></div>
+						<div class="item-inner">
+						  <div class="item-title">POP BM</div>
+						</div>
+					  </a>
+					</li>
+					<li class="display-none">
+					  <a href="/prevencao/" id="prev"  style="color:#242423" class="item-link item-content">
+						<div class="item-media"><img src="img/prev.png" width="30"></div>
+						<div class="item-inner">
+						  <div class="item-title">PREVENÇÃO</div>
+						</div>
+					  </a>
+					</li>
+				  </ul>
+				</div><br>
+				<div class="row block">
+					<div class="col left">
+						<center><img style="margin-left:2px;" id="firefront" src="img/firefront.png" width="150"></center>
+					</div>
+				</div>
+		</div>
+			
+			 <!-- Initial Page, "data-name" contains page name -->			
+            <div data-name="index" class="page">
+			
+                <!-- Scrollable page content -->
+                <div class="page-content">
+				
+					<!-- BLOCO PARA ANIMAÇÃO TELA INICIAL -->
+                    <div class="Aligner animated lightSpeedIn">
+                        <div class="Aligner-item Aligner-item--top"></div>
+                        <div class="Aligner-item"><center><img id="logoInicio" style="max-width: 100%; max-height: 400px;" src="img/logo.png" />
+						<b id="semConexao" style="color:white"></b><br>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+	</div>
+   
+
+	<!--<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>-->
+	<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAehzI7eWWKTn6wDS01MJGjT3ASDQUyqzs"></script>-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="js/leaflet.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+	 
+	
+	
+
+    <script type="text/javascript" src="cordova.js"></script>
+  
+
+</body>
+</html>

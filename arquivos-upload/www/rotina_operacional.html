@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/framework7.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<title>Login</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="home" class="page">
+
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div style="margin-top:7px;" class="left">
+							<a href="/admunidadesciabm/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title">
+							<b>Rotina Operacional</b>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Scrollable page content -->
+				<div class="page-content">
+
+					<input style="margin-left:10px;" id="id" class="display-none" placeholder="id">
+					<div class="inserir_carga display-none" id="inserir_carga">
+						<div class="list no-hairlines-md">
+							<ul>
+								<li class="selecao_atividade">
+									<a class="item-link smart-select smart-select-init" data-open-in="popup"
+										data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="mapa_carga" id="mapa_carga">
+											<optgroup class="mapa-carga" label="Area de Carga">
+												<option value="" selected>Selecionar</option>
+
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">Mapa-Carga</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li id="vtr_inserircarga" class="display-none">
+									<a class="item-link smart-select smart-select-init" data-open-in="popup"
+										data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="carga_vtr" id="carga_vtr">
+											<optgroup class="vtrs_bbm" label="Minhas Viaturas">
+												<option value="" selected>Selecionar</option>
+
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">Viatura</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li id="select_compartimento">
+									<a class="item-link smart-select smart-select-init" data-open-in="popup"
+										data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select class="setor_compartimento" id="setor_compartimento">
+											<optgroup class="area_compartimento" label="Area, Setor ou Compartimento">
+												<option value="" selected>Selecionar</option>
+
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">Setor/Compartimento</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li style="margin-left:5px;" class="material_edicao display-none">
+									<div id="material_edicao" class="item-inner">
+										<span style="text-transform:uppercase;" class="item-title"></span>
+									</div>
+								</li>
+								<li id="select_material">
+									<a class="item-link smart-select smart-select-init" data-open-in="popup"
+										data-searchbar="true" data-searchbar-placeholder="Buscar">
+										<select style="font-size:8px;" class="material_carga" id="material_carga">
+											<optgroup class="lista_materiais" label="Minhas Viaturas">
+												<option value="" selected>Selecionar</option>
+
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">Material</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="item-link smart-select smart-select-init">
+										<select class="condicoes_uso" id="condicoes_uso">
+											<option value="" selected>Selecionar</option>
+											<option value="Ótimo">Ótimo</option>
+											<option value="Bom">Bom</option>
+											<option value="Ruim">Ruim</option>
+											<option value="Inservível">Inservível</option>
+											<option value="Danificado">Danificado</option>
+											<option value="Comunicar Logística">Comunicar Logística</option>
+										</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">Conservação</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li id="inspecao_condutor" class="item-content item-input display-none">
+									<div class="item-inner">
+										<div class="item-title item-floating-label">Verificar:</div>
+										<div class="item-input-wrap">
+											<!-- Campo input que vai receber automaticamente o nome do militar -->
+											<input class="item-carga acao_manutencao" id="acao_manutencao" type="text"
+												placeholder="Descreva o modo de inspeção">
+											<span class="input-clear-button"></span>
+										</div>
+									</div>
+								</li>
+								<!--<li class="item-content item-input">
+									<div class="item-inner">
+										<div style="" class="item-title item-floating-label">Item N°:</div>
+										<div class="item-input-wrap">
+											 Campo input que vai receber automaticamente o nome do militar 
+											<input style="" class="item_carga" id="item_carga" type="text"
+												placeholder="N° Item do compartimento">
+											<span class="input-clear-button"></span>
+										</div>
+									</div>
+								</li>-->
+							</ul>
+						</div>
+						<div>
+							<center>
+								<small style="color:#cccccc;">QUANTIDADE:</small><br>
+								<div class="stepper stepper-round stepper-init">
+									<div class="stepper-button-minus"></div>
+									<div class="stepper-input-wrap">
+										<input class="quantidade_carga" id="quantidade_carga" type="text" value="0"
+											min="0" max="100" step="1" readonly>
+									</div>
+									<div class="stepper-button-plus"></div>
+								</div>
+							</center>
+						</div><br>
+
+						<div class="block">
+							<center><textarea
+									style="padding: 2px 2px 2px 10px;border:2px solid #f2f1ed;border-radius:10px;"
+									class="alteracoes_carga" id="alteracoes_carga" name="alteracoes"
+									placeholder="Se necessário, descreva sua observação." cols="40" rows="5"></textarea>
+							</center>
+						</div>
+
+						<div class="block">
+
+							<button id="BotaoEditar_mapacarga"
+								style="background:linear-gradient(to right, #0c75c2, #0c75c2);"
+								class="BotaoEditar_trajeto col button button-fill button-round display-none"> Editar
+							</button>
+
+							<button id="BotaoSalvar_mapacarga"
+								style="background:linear-gradient(to right, #e52d27, #b31217);"
+								class="BotaoSalvar_mapacarga col button button-fill button-round"> Salvar </button>
+
+							<button id="BotaoSalvar_conferenciacondutor"
+								style="background:linear-gradient(to right, #e52d27, #b31217);"
+								class="BotaoSalvar_conferenciacondutor col button button-fill button-round display-none">
+								Salvar </button>
+
+							<button id="BotaoEditar_conferenciacondutor"
+								style="background:linear-gradient(to right, #0c75c2, #0c75c2);"
+								class="BotaoEditar_conferenciacondutor col button button-fill button-round display-none">
+								Editar </button>
+
+						</div><br><br>
+					</div>
+					<!-- BUSCA CORRIDA -->
+
+					<div id='area_conferencia' class="list accordion-list">
+						<ul>
+							<li>
+								<a href="#" id='adiciona_carga' style="color:#85858a;" class="item-link item-content">
+									<!--<div class="item-media"><img src="img/firefront.png" width="60"></i></div>-->
+									<div class="item-inner">
+										<div class="item-title">Adicionar Carga</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href='/cadastros/' style="color:#85858a;" class="item-link item-content">
+									<!--<div class="item-media"><img src="img/firefront.png" width="60"></i></div>-->
+									<div class="item-inner">
+										<div class="item-title">Cadastros</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="item-link smart-select smart-select-init">
+									<select id="mapacarga_selecionado">
+										<option class="select-mapa-carga" value="" selected>Selecionar</option>
+
+									</select>
+									<div class="item-content">
+										<div class="item-inner">
+											<div style="color:#85858a;" class="item-title">Atividade</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li id="mapa_abts" class="accordion-item"><a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#85858a">Mapa-Carga ABTS</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<div class="row block">
+										<div class="col-10">
+											<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;"
+													id="procurar_cargaabts" class="mdi mdi-magnify"></i></a>
+										</div>
+										<div class="col-90">
+											<form>
+												<input class="meu-input" type="text" id="pesquisa_cargaabts"
+													name="pesquisa_cargaabts" placeholder="Pesquisar">
+											</form>
+										</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div id="lista_abts" class="block">
+
+									</div>
+								</div>
+							</li>
+							<li id="mapa_minialmox" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#85858a">Mapa-Carga Mini. Almox.</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<div id="pesquisa_cargaabts" class="row block">
+										<div class="col-10">
+											<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;"
+													id="procurar_cargaminialmox" class="mdi mdi-magnify"></i></a>
+										</div>
+										<div class="col-90">
+											<form>
+												<input class="meu-input" type="text" id="pesquisa_cargaminialmox"
+													name="pesquisa_minialmox" placeholder="Pesquisar">
+											</form>
+										</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="lista_minialmox">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="mapa_resgate" class="accordion-item display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#85858a">Mapa-Carga Resgate</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<div id="pesquisa_cargaabts" class="row block">
+										<div class="col-10">
+											<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;"
+													id="procurar_cargaresgate" class="mdi mdi-magnify"></i></a>
+										</div>
+										<div class="col-90">
+											<form>
+												<input class="meu-input" type="text" id="pesquisa_cargaresgate"
+													name="pesquisa_resgate" placeholder="Pesquisar">
+											</form>
+										</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="lista_resgate">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="mapa_absl" class="accordion-item  display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#85858a">Mapa-Carga ABSL</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<div id="pesquisa_cargaabts" class="row block">
+										<div class="col-10">
+											<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;"
+													id="procurar_cargaabsl" class="mdi mdi-magnify"></i></a>
+										</div>
+										<div class="col-90">
+											<form>
+												<input class="meu-input" type="text" id="pesquisa_cargaabsl"
+													name="pesquisa-viatura" placeholder="Pesquisar">
+											</form>
+										</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="lista_absl">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li id="mapa_condutor" class="accordion-item  display-none"><a href="#"
+									class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title" style="color:#242423">Rotina do Condutor</div>
+									</div>
+								</a>
+								<div class="accordion-item-content"><br>
+									<div id="pesquisa_cargaabts" class="row block">
+										<div class="col-10">
+											<a class="link" href=""><i style="color:#cccccc;font-size:1.8em;"
+													id="procurar_listacondutor" class="mdi mdi-magnify"></i></a>
+										</div>
+										<div class="col-90">
+											<form>
+												<input class="meu-input" type="text" id="parametro_busca"
+													name="pesquisa-viatura" placeholder="Pesquisar">
+											</form>
+										</div>
+									</div><br>
+									<!-- FUNÇÃO WHILE TRAFEGOS NO PHP-->
+									<div class="list block">
+										<ul id="lista_condutor">
+
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+
+
+				</div>
+
+				<!-- FAB Right Bottom (Orange)
+				<div class="fab fab-right-bottom">
+					<a href="#">
+						 Icons For MD Theme 
+						<i class="mdi mdi-plus"></i>
+						<i class="mdi mdi-close"></i>
+					</a>
+					 FAB speed dial actions with labels
+					<div class="fab-buttons fab-buttons-top">
+						<a id='confere_carga' class="formr fab-label-button">
+							<span>1</span>
+							<span class="fab-label">Conferir Carga         </span>
+						</a>
+						<a id='adiciona_carga' class="faledep fab-label-button">
+							<span>2</span>
+							<span class="fab-label">Adicionar Carga        </span>
+						</a>
+						<a href='/cadastros/' class="faledep fab-label-button">
+							<span>3</span>
+							<span class="fab-label">Cadastrar Material     </span>
+						</a>
+						<a href='/cadastros/' class="faledep fab-label-button">
+							<span>4</span>
+							<span class="fab-label">Cadastrar Compartimento</span>
+						</a>
+					</div>
+				</div>-->
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/framework7.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.css">
+	<title>safApp</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- Statusbar overlay -->
+		<div class="statusbar"></div>
+
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="GERÊNCIA VIATURAS" class="page">
+
+				<!-- Top Navbar -->
+				<!--<div id="NavBarTopoHome" style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div class="left link" style="margin-top:7px;">
+							<a href="/admunidadesciabm/"><img id="arrow_left" src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div style="font-size:16px;" class="title" >
+							<b>CADASTRO DE RECURSO</b>
+						</div>
+						<div class="right">
+							<a><img style="margin-top:7px;" id="semaforo" src="img/refresh.png" width="60"></a>
+						</div>
+					</div>
+				</div>-->
+				
+				<!-- Top Navbar -->
+				<div style="background:linear-gradient(to right, #e52d27, #b31217);" class="navbar shadow">
+					<div class="navbar-inner">
+						<div id="arrow_left_perfil"  style="margin-top:7px;" class="left">
+							<a href="/gerencia/"><img src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div id="arrow_left_normal" style="margin-top:7px;" class="left display-none">
+							<a href="/rotina_operacional/"><img  src="img/arrow_left.png" width="60"></a>
+						</div>
+						<div class="title" >
+							<b>Cadastro de Recursos</b>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Scrollable page content -->
+				<div class="page-content" style="background:#ffffff;">
+
+					<!-- CONTEUDO DA PAGINA AQUI -->
+					<div class="list">
+						<ul>
+							<!-- Cadastro de Usuários! -->
+							<li id='cadastro_de_usuarios' class="accordion-item">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Militar</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="cadastro_militar">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Nome Completo</div>
+														<div class="item-input-wrap">
+															<input type="text" id="CadnomeCadastro" maxlength="100"
+																name="nomeCadastro" placeholder="Seu nome completo">
+														</div>
+													</div>
+												</li>
+												<li>
+													<a class="item-link smart-select smart-select-init"
+														data-open-in="popover">
+														<select id="CadpatenteCadastro">
+															<option value="" selected>Selecionar</option>
+															<option value="SD">SD</option>
+															<option value="CB">CB</option>
+															<option value="SGT">SGT</option>
+															<option value="ST">ST</option>
+															<option value="ASP">ASP</option>
+															<option value="TEN">TEN</option>
+															<option value="CAP">CAP</option>
+															<option value="MAJ">MAJ</option>
+															<option value="TC">TC</option>
+															<option value="CEL">CEL</option>
+														</select>
+														<div class="item-content">
+															<div class="item-inner">
+																<div style="color:#d2d3d7" class="item-title">Patente
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Nome de Guerra</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="CadnguerraCadastro" maxlength="100"
+																name="nomeCadastro" placeholder="Seu nome de Guerra"><b>
+															</b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Número Funcional
+														</div>
+														<div class="item-input-wrap">
+															<input type="tel" id="CadfuncionalCadastro" maxlength="14"
+																name="text" placeholder="Seu Número Funcional">
+														</div>
+													</div>
+												</li>
+												<li>
+													<a class="item-link smart-select smart-select-init"
+														data-open-in="popover">
+														<select class="lotacao_obm" id="CadobmCadastro">
+															<option value="" selected>Selecionar</option>
+
+														</select>
+														<div class="item-content">
+															<div class="item-inner">
+																<div style="color:#d2d3d7" class="item-title">Unidade
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a class="item-link smart-select smart-select-init"
+														data-open-in="popover">
+														<select class="lotacao_subobm" id="CadsubobmCadastro">
+															<option value="" selected>Selecionar</option>
+
+														</select>
+														<div class="item-content">
+															<div class="item-inner">
+																<div style="color:#d2d3d7" class="item-title">Subunidade
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li>
+													<a class="item-link smart-select smart-select-init"
+														data-open-in="popover">
+														<select id="CadperfilCadastro">
+															<option value="" selected>Normal</option>
+															<option value="Adm">Adm</option>
+														</select>
+														<div class="item-content">
+															<div class="item-inner">
+																<div style="color:#d2d3d7" class="item-title">Perfil
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li class="item-divider">Dados de acesso:</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">E-mail (Login)</div>
+														<div class="item-input-wrap">
+															<input type="email" id="CademailCadastro"
+																name="emailCadastro"
+																placeholder="Informe um e-mail válido">
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Criar Senha</div>
+														<div class="item-input-wrap">
+															<input type="password" id="CadsenhaCadastro"
+																name="senhaCadastro" placeholder="Informe uma senha">
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Repetir Senha</div>
+														<div class="item-input-wrap">
+															<input type="password" id="CadrepeteSenhaCadastro"
+																name="repeteSenhaCadastro" placeholder="Repita a senha">
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="Nome de Guerra">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+
+										<div><br>
+
+											<label class="checkbox"><input id="CadcheckPolitica" type="checkbox"><i
+													class="icon-checkbox"></i></label> Li e concordo com a <a href="#"
+												class="link external"> <u>Política de Privacidade</u></a>
+											<br><br>
+
+											<label class="checkbox"><input id="CadcheckTermos" type="checkbox"><i
+													class="icon-checkbox"></i></label> Li e concordo com os <a href="#"
+												class="link external"> <u>Termos de Uso</u></a>
+
+										</div><br><br>
+
+										<p class="row">
+											<button id="Cadcadastra"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">FAZER CADASTRO</button>
+											<center>
+												<a href="/login/" class="link"><b><i class="mdi mdi-login-variant"></i>
+														Já tenho uma conta</b></a><br><br>
+											</center>
+										</p>
+
+									</div><br><br>
+
+								</div>
+							</li>
+
+							<!-- Cadastro de Viaturas! -->
+							<li id='cadastro_de_viaturas' class="accordion-item">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Viatura</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="obm_viatura">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li  class="item-content item-input display-none">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Quartel</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="quartel" maxlength="100" name="quartel"
+																placeholder="XXX-123"><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Subunidade</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="subunidade" maxlength="100" name="quartel"
+																placeholder="XXX-123"><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Prefixo</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="prefixo_vtr" maxlength="100" name="prefixo_vtr"
+																placeholder="XYZ 123"><b> </b>
+														</div>
+													</div>
+												</li>
+												<li>
+													<a class="item-link smart-select smart-select-init"
+														data-open-in="popover">
+														<select id="tipologia_vtr">
+															<option value="" selected>Selecionar</option>
+															<option value="ADM">ADM</option>
+															<option value="OPERACIONAL">OPERACIONAL</option>
+														</select>
+														<div class="item-content">
+															<div class="item-inner">
+																<div style="color:#d2d3d7" class="item-title">Tipologia
+																</div>
+															</div>
+														</div>
+													</a>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="id" type="hidden"
+																placeholder="id">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="Nome de Guerra">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br><br>
+
+										<p class="row">
+											<button id="cadastrar_viatura"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">ADICIONAR VTR</button>
+										</p>
+
+									</div>
+								</div>
+							</li>
+
+							<!-- Cadastro de Unidade! -->
+							<li id="cad-unidade" class="accordion-item display-none">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Unidade</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="cad_unidade">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Unidade</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="cadastro_obm" maxlength="100" name="cadastro_obm"
+																placeholder="BBM, CiaInd Diretoria ou Centro."><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="Nome de Guerra">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br>
+
+										<p class="row">
+											<button id="cadastrar_unidade"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">ADICIONAR UNIDADE</button>
+										</p><br>
+
+									</div>
+								</div>
+							</li>
+							<!-- Cadastro de Subunidade! -->
+							<li id="cad-subunidade" class="accordion-item display-none">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Subunidade</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="cad_unidade">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Subunidade</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="cadastro_subobm" maxlength="100"
+																name="cadastro_subobm" placeholder="CIA, Dept., PAB"><b>
+															</b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="Nome de Guerra">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br>
+
+										<p class="row">
+											<button id="cadastrar_subunidade"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">ADICIONAR
+												SUBUNIDADE</button>
+										</p><br>
+
+									</div>
+								</div>
+							</li>
+							<!-- Cadastro de Areas de Carga -->
+							<li id='cadastro_de_areas' class="accordion-item">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Areas/Vtrs com Carga</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="cad_material">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Quartel</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="quartel" maxlength="100" name="quartel"
+																placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Subunidade</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="subunidade" maxlength="100" name="subunidade"
+																placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Area de Carga
+														</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="area-de-carga" maxlength="100"
+																name="area-de-carga" placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="id" type="hidden"
+																placeholder="id">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br>
+
+										<p class="row">
+											<button id="cadastrar_ambiente"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">INSERIR AREA/VTR</button>
+										</p><br>
+
+									</div>
+								</div>
+							</li>
+							<!-- Cadastro de Compartimentos e Setores! -->
+							<li class="accordion-item">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Alocação de Recursos</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+								<input style="margin-left:10px;" id="id" type="hidden" placeholder="id">
+									<div class="block" id="cad_material">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Compartimento/Setor
+														</div>
+														<div class="item-input-wrap">
+															<input type="text" style="text-transform: uppercase;font-weight: bold;" id="inserir_compartimento" maxlength="100"
+																name="inserir_compartimento" placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br>
+
+										<p class="row">
+											<button id="cadastrar_compartimento"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">INSERIR COMPARTIMENTO</button>
+										</p><br>
+
+									</div>
+								</div>
+							</li>
+							<!-- Cadastro de Equipamentos e Materiais! -->
+							<li class="accordion-item">
+								<a href="#" class="item-content item-link">
+									<div class="item-inner">
+										<div class="item-title">Equipamentos e Materiais</div>
+									</div>
+								</a>
+								<div class="accordion-item-content">
+									<div class="block" id="cad_material">
+										<div style='border-radius:10px;border:2px solid #cccccc;background:#fafafa;' class="list no-hairlines">
+											<ul>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Quartel</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="quartel" maxlength="100" name="quartel"
+																placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input">
+													<div class="item-inner">
+														<div class="item-title item-floating-label">Equipamento/Material
+														</div>
+														<div class="item-input-wrap">
+															<input type="text"
+																style="text-transform: uppercase;font-weight: bold;"
+																id="equipamento_material" maxlength="100"
+																name="equipamento_material" placeholder=""><b> </b>
+														</div>
+													</div>
+												</li>
+												<li class="item-content item-input display-none">
+													<div class="item-inner">
+														<div style="margin-left:10px;"
+															class="item-title item-floating-label">Militar</div>
+														<div class="item-input-wrap">
+															<input style="margin-left:10px;" id="id" type="hidden"
+																placeholder="id">
+															<input style="margin-left:10px;" id="militar" type="text"
+																placeholder="">
+															<span class="input-clear-button"></span>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div><br>
+
+										<p class="row">
+											<button id="cadastrar_material"
+												style="background:linear-gradient(to right, #e52d27, #b31217);"
+												class="col button button-fill button-round">ADICIONAR RECURSO</button>
+										</p><br>
+
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><br><br><br><br>
+
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/framework7.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+
+</html>
