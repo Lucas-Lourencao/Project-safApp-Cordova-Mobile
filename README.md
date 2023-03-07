@@ -6,13 +6,13 @@ Este projeto iniciou em 2019 após a realização do Curso "Desenvolvendo Aplica
 Neste curso, posso dizer, nasceu minha paixão pelo mundo da TI. Especificamente pela programação.
 
 Mas foi a partir deste curso que decidi me especializar. 
-Comecei o técnólogo em Análise e Desenvolvimento de Softwares e fiz vários cursos em diversas plataformas.
+Comecei o tecnólogo em Análise e Desenvolvimento de Softwares e fiz vários cursos em diversas plataformas de ensino.
 
-Mas para não fugir do propósito deste repositório, aqui você vai encontrar a ultima versão (1.24 - 24 versõespublicadas e 1 ano e meio de utilização dentro de uma unidade de bombeiros militar) em funcionamento do Aplicativo denominado safApp.
+Mas para não fugir do propósito deste repositório, aqui você vai encontrar a ultima versão (1.24 - 24 versões publicadas e 1 ano e meio de utilização dentro de uma unidade de bombeiros militar) em funcionamento do Aplicativo denominado safApp.
 
 No meio militar dizer que alguém é SAFO, quer dizer que alguém desenrola ou é desenrolado, ou seja, diz-se que um militar é safo para inferir que ele tem uma habilidade aguçada em determinada atividade.
 
-Assim, safApp vem da ideia de uma aplicação de tornar uma missão mais fácil de ser executada. Uma aplicação que promove a execução de uma tarefa mais facilmente. Um App SAFO, no caso!
+Assim, safApp vem da ideia de uma aplicação que torne uma missão mais fácil de ser executada. Uma aplicação que promove a execução de uma tarefa mais facilmente. Um App SAFO, no caso.
 
 O safApp foi desenvolvido para auxiliar na gestão de atividades de uma unidade Bombeiro Militar. Dentro das atividades desenvolvidas estão:
 1. Controle de KM (quilometragem de viaturas);
