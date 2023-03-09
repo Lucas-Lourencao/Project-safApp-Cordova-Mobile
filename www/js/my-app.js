@@ -49,7 +49,7 @@ var app = new Framework7({
 
 					//REDIRECIONAR PARA HOME EM 5 SEGUNDOS
 					setTimeout(function () {
-
+						// desabilitar o login, comentar este trecho de código.
 						var login = localStorage.getItem("email");
 
 						if (login == null || login == '') {
@@ -180,7 +180,7 @@ var app = new Framework7({
 							$.ajax({
 								type: 'POST',
 								data: { email: email, senha: senha, chave: '123' },
-								url: 'https://interappctive.com/admciabm/login.php',
+								url: 'http://localhost/safapp-mobile/login.php',
 								crossDomain: true,
 
 								success: function (respost) {
@@ -246,7 +246,7 @@ var app = new Framework7({
 							$.ajax({
 								type: 'POST',
 								data: { email: email, chave: '123' },
-								url: 'https://interappctive.com/admciabm/verificar-email.php',
+								url: 'http://localhost/safapp-mobile/verificar-email.php',
 
 								success: function (resposta) {
 
@@ -293,7 +293,7 @@ var app = new Framework7({
 						$.ajax({
 							type: 'POST',
 							data: { email: email, codigo: codigo, chave: '123' },
-							url: 'https://interappctive.com/admciabm/verificar-codigo.php',
+							url: 'http://localhost/safapp-mobile/verificar-codigo.php',
 
 							success: function (resposta) {
 
@@ -338,7 +338,7 @@ var app = new Framework7({
 						$.ajax({
 							type: 'POST',
 							data: { email: email, senha: senha, chave: '123' },
-							url: 'https://interappctive.com/admciabm/salvar-nova-senha.php',
+							url: 'http://localhost/safapp-mobile/salvar-nova-senha.php',
 
 							success: function (resposta) {
 
@@ -944,7 +944,7 @@ var app = new Framework7({
 							$.ajax({
 								type: 'POST',
 								data: { email: email, senha: senha, chave: '123' },
-								url: 'https://interappctive.com/admciabm/login.php',
+								url: 'http://localhost/safapp-mobile/login.php',
 								crossDomain: true,
 
 								success: function (respost) {

@@ -1,5 +1,5 @@
 <?php 
-require('conexaoadmciabm.php');
+require('conexao.php');
 
 $email = mysqli_real_escape_string($conexao,$_POST["email"]);
 $senha = mysqli_real_escape_string($conexao,$_POST["senha"]);
